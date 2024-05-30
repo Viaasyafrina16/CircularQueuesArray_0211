@@ -63,6 +63,10 @@ public:
     }
 
     void dislay() {
+
+       int FRONT_Position = FRONT;
+       int REAR_Position = REAR;
+       
         
     }
 };
