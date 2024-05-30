@@ -17,11 +17,11 @@ public:
        int num;
        cout << "Enter a number: ";
        cin >> num; 
-       cout << endl,
+       cout << endl;
 
        //Cek apakah antrian penuh
        if ((FRONT == 0 && REAR == max - 1) || (FRONT == REAR + 1)) {
-            cout << "\nQueues overflow\n";
+            cout << "\nQueue overflow\n";
             return;
        }
 
@@ -37,5 +37,9 @@ public:
         else
             REAR = + 1;
        }
+       queues_array[REAR] = num;
+    }
+    void remove() {
+        
     }
 };
