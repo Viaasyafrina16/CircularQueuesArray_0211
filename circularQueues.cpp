@@ -5,7 +5,7 @@ class Queues {
 private :
     static const int max = 3;
     int FRONT,REAR;
-    int queues_array[max];
+    int queue_array[max];
 
 public:
     Queues() {
@@ -37,7 +37,7 @@ public:
         else
             REAR = + 1;
        }
-       queues_array[REAR] = num;
+       queue_array[REAR] = num;
     }
     void remove() {
         // Cek apakah antrian kosong
@@ -45,6 +45,24 @@ public:
             cout << "Queue underflow\n";
             return;
         }
+        cout << "\nThe element deleted from the queue is: " << queue_array[FRONT] << "\n";
 
+        //Cek jika antrian hanya memiliki satu elemen
+        if (FRONT == REAR) {
+            FRONT = -1;
+            REAR = -1;
+        }
+        else {
+            //Jika elemen yang dihapus berada di posisi terakhir array, kembali ke awal array
+            if (FRONT == max - 1)
+                FRONT = 0;
+            else
+                FRONT = + 1;
+        }
+
+    }
+
+    void dislay() {
+        
     }
 };
